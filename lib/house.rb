@@ -1,4 +1,4 @@
 class House
-  def line()
+  def line(number)
   end
 end
