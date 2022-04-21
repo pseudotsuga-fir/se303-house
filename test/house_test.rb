@@ -16,25 +16,21 @@ class HouseTest < Minitest::Test
   end
 
   def test_line_3
-    skip
     expected = "This is the rat that ate the malt that lay in the house that Jack built.\n"
     assert_equal expected, House.new.line(3)
   end
 
   def test_line_4
-    skip
     expected = "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     assert_equal expected, House.new.line(4)
   end
 
   def test_line_5
-    skip
     expected = "This is the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     assert_equal expected, House.new.line(5)
   end
 
   def test_line_6
-    skip
     expected = "This is the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     assert_equal expected, House.new.line(6)
   end
