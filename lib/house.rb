@@ -13,14 +13,14 @@ class House
       4 =>  "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n",
       3 =>  "This is the rat that ate the malt that lay in the house that Jack built.\n",
       2 =>  "This is the malt that lay in the house that Jack built.\n",
-      1 =>  "This is the house that Jack built.\n",
+      1 =>  "house that Jack built.\n",
     }
   end
 
   def line(number)
     case number
     when 1
-      @verses[1]
+      "This is the " << @verses[1]
     when 2
       @verses[2]
     when 3
