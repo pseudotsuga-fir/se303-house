@@ -19,32 +19,7 @@ class House
 
   def line(number)
     "This is the " <<
-    case number
-    when 1
-      @verses[1]
-    when 2
-      @verses[2]
-    when 3
-      @verses[3]
-    when 4
-      @verses[4]
-    when 5
-      @verses[5]
-    when 6
-      @verses[6]
-    when 7
-      @verses[7]
-    when 8
-      @verses[8]
-    when 9
-      @verses[9]
-    when 10
-      @verses[10]
-    when 11
-      @verses[11]
-    else
-      @verses[12]
-    end
+    @verses[number]
   end
 
   def recite
