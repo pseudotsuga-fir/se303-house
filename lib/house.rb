@@ -18,31 +18,32 @@ class House
   end
 
   def line(number)
+    "This is the " <<
     case number
     when 1
-      "This is the " << @verses[1]
+      @verses[1]
     when 2
-      "This is the " << @verses[2]
+      @verses[2]
     when 3
-      "This is the " << @verses[3]
+      @verses[3]
     when 4
-      "This is the " << @verses[4]
+      @verses[4]
     when 5
-      "This is the " << @verses[5]
+      @verses[5]
     when 6
-      "This is the " << @verses[6]
+      @verses[6]
     when 7
-      "This is the " << @verses[7]
+      @verses[7]
     when 8
-      "This is the " << @verses[8]
+      @verses[8]
     when 9
-      "This is the " << @verses[9]
+      @verses[9]
     when 10
-      "This is the " << @verses[10]
+      @verses[10]
     when 11
-      "This is the " << @verses[11]
+      @verses[11]
     else
-      "This is the " << @verses[12]
+      @verses[12]
     end
   end
 
