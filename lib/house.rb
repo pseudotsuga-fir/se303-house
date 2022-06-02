@@ -24,14 +24,6 @@ class House
     start_phrase
   end
 
-  def pirate_line(number)
-    result = "Thar be the "
-    number.downto(1) do |n|
-      result << @verses[n]
-    end
-    result
-  end
-
   def recite
     (1..12).map { |n| line(n) }.join("\n")
   end
