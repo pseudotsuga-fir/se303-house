@@ -26,10 +26,6 @@ class House
   end
 
   def recite
-    song = ""
-    (1..11).each do |x|
-      song += (line(x) + "\n")
-    end
-    song += line(12)
+    (1..12).map { |n| line(n) }.join("\n")
   end
 end
