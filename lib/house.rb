@@ -17,6 +17,15 @@ class House
     }
   end
 
+  def random_verses
+    ran_list = [*2..12].sample(11)
+    custom_verses = {1 => @verses[1]}
+    (2..12).map do |n|
+      custom_verses[n] = @verses[ran_list[n-2]]
+    end
+    custom_verses
+  end
+
   def line(number, start_phrase="This is the ")
     number.downto(1) do |n|
       start_phrase << @verses[n]
@@ -28,3 +37,6 @@ class House
     (1..12).map { |n| line(n) }.join("\n")
   end
 end
+
+h = House.new()
+puts h.random_verses
