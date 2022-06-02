@@ -17,12 +17,11 @@ class House
     }
   end
 
-  def line(number)
-    result = "This is the "
+  def line(number, start_phrase="This is the ")
     number.downto(1) do |n|
-      result << @verses[n]
+      start_phrase << @verses[n]
     end
-    result
+    start_phrase
   end
 
   def pirate_line(number)
