@@ -134,7 +134,7 @@ Thar be the horse and the hound and the horn that belonged to the farmer sowing 
     assert_equal expected, House.new(verses: Verses.new.randomize_verses).line(3)
   end
 
-  def test_all_random_lines
+  def test_all_shuffled_lines
     expected = <<-TEXT
 This is the house that Jack built.
 
@@ -162,5 +162,41 @@ This is the farmer sowing his corn that kept the cat that killed the rat that at
     TEXT
     srand(5)
     assert_equal expected, House.new(verses: Verses.new.randomize_verses).recite
+  end
+
+  def test_pirate_shuffled_line
+    expected = "Thar be the priest all shaven and shorn that married the dog that worried the house that Jack built.\n"
+    srand(5)
+    assert_equal expected, House.new(start_phrase: "Thar be the ",verses: Verses.new.randomize_verses).line(3)
+  end
+
+  def test_all_pirate_shuffled_lines
+    expected = <<-TEXT
+Thar be the house that Jack built.
+
+Thar be the dog that worried the house that Jack built.
+
+Thar be the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+Thar be the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+Thar be the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+Thar be the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+Thar be the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+Thar be the horse and the hound and the horn that belonged to the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+Thar be the man all tattered and torn that kissed the horse and the hound and the horn that belonged to the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+Thar be the rat that ate the man all tattered and torn that kissed the horse and the hound and the horn that belonged to the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+Thar be the cat that killed the rat that ate the man all tattered and torn that kissed the horse and the hound and the horn that belonged to the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+Thar be the farmer sowing his corn that kept the cat that killed the rat that ate the man all tattered and torn that kissed the horse and the hound and the horn that belonged to the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+    TEXT
+    srand(5)
+    assert_equal expected, House.new(start_phrase: "Thar be the ",verses: Verses.new.randomize_verses).recite
   end
 end
