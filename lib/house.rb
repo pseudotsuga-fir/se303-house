@@ -36,6 +36,34 @@ class Verses
       2 =>  "malt that lay in the ",
       1 =>  "house that Jack built.\n",
     }
+
+    @nouns = [
+      "horse and the hound and the horn",
+      "farmer sowing his corn",
+      "rooster that crowed in the morn",
+      "priest all shaven and shorn",
+      "man all tattered and torn",
+      "maiden all forlorn",
+      "cow with the crumpled horn",
+      "dog",
+      "cat",
+      "rat",
+      "malt",
+    ]
+
+    @verbs = [
+      "belonged to",
+      "kept",
+      "crowed in the morn that woke",
+      "married",
+      "kissed",
+      "milked",
+      "tossed",
+      "worried",
+      "killed",
+      "ate",
+      "lay in"
+    ]
   end
 
   def randomize_verses
