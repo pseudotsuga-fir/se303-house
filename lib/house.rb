@@ -74,4 +74,15 @@ class Verses
     end
     custom_verses
   end
+
+  def randomize_clauses_verses
+    noun_indexes = [*0..10].sample(11)
+    verb_indexes = [*0..10].sample(11)
+
+    custom_verses = {1 => @verses[1]}
+    (2..12).map do |n|
+      custom_verses[n] = "#{@nouns[noun_indexes[n-2]]} that #{@verbs[verb_indexes[n-2]]} the "
+    end
+    custom_verses
+  end
 end

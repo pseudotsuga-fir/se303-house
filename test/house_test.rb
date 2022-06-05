@@ -199,4 +199,10 @@ Thar be the farmer sowing his corn that kept the cat that killed the rat that at
     srand(5)
     assert_equal expected, House.new(start_phrase: "Thar be the ",verses: Verses.new.randomize_verses).recite
   end
+
+  def test_shuffled_clause_line
+    expected = "This is the rat that belonged to the cat that milked the house that Jack built.\n"
+    srand(2)
+    assert_equal expected, House.new(verses: Verses.new.randomize_clauses_verses).line(3)
+  end
 end
