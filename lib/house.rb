@@ -1,17 +1,19 @@
 class House
 
-  def initialize
+  def initialize(start_phrase="This is the ")
     @verses = Verses.new.verses
+    @start_phrase = start_phrase
   end
 
-  def line(number, start_phrase="This is the ")
+  def line(number)
+    line = "#{@start_phrase}"
     number.downto(1) do |n|
-      start_phrase << @verses[n]
+      line << @verses[n]
     end
-    start_phrase
+    line
   end
 
-  def recite
+  def recite()
     (1..12).map { |n| line(n) }.join("\n")
   end
 end
