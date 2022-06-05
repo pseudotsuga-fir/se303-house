@@ -133,4 +133,34 @@ Thar be the horse and the hound and the horn that belonged to the farmer sowing 
     srand(5)
     assert_equal expected, House.new(verses: Verses.new.randomize_verses).line(3)
   end
+
+  def test_all_random_lines
+    expected = <<-TEXT
+This is the house that Jack built.
+
+This is the dog that worried the house that Jack built.
+
+This is the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+This is the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+This is the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+This is the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+This is the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+This is the horse and the hound and the horn that belonged to the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+This is the man all tattered and torn that kissed the horse and the hound and the horn that belonged to the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+This is the rat that ate the man all tattered and torn that kissed the horse and the hound and the horn that belonged to the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+This is the cat that killed the rat that ate the man all tattered and torn that kissed the horse and the hound and the horn that belonged to the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+
+This is the farmer sowing his corn that kept the cat that killed the rat that ate the man all tattered and torn that kissed the horse and the hound and the horn that belonged to the cow with the crumpled horn that tossed the maiden all forlorn that milked the malt that lay in the rooster that crowed in the morn that woke the priest all shaven and shorn that married the dog that worried the house that Jack built.
+    TEXT
+    srand(5)
+    assert_equal expected, House.new(verses: Verses.new.randomize_verses).recite
+  end
 end
