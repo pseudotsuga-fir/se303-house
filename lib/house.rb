@@ -1,6 +1,6 @@
 class House
 
-  def initialize(start_phrase="This is the ", verses=Verses.new.verses)
+  def initialize(start_phrase: "This is the ", verses: Verses.new.verses)
     @verses = verses
     @start_phrase = start_phrase
   end
